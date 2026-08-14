@@ -9,3 +9,4 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-08-14T16:30:00,2026-08-14T21:30:00.004Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
 2026-08-14T16:31:00,2026-08-14T21:31:00.004Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
 2026-08-14T16:32:00,2026-08-14T21:32:00.005Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-08-14T17:19:27,2026-08-14T22:19:27.797Z,NO_MODULE,,,,,dom,waitlist module absent
