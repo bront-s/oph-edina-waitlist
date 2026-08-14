@@ -173,7 +173,7 @@ async function sampleOnce() {
   await send("Page.reload", { ignoreCache: false });
 
   // wait for the app's waitlist GraphQL response
-  const deadline = Date.now() + 50000;
+  const deadline = Date.now() + 40000;
   let req = null, resp = null;
   while (Date.now() < deadline && !resp) {
     await sleep(500);
@@ -282,7 +282,9 @@ while (true) {
     log(`sample: status=${s.status} parties=${s.parties} wait=${s.min}-${s.max}min src=${s.source}`);
   } catch (e) {
     consecutiveFailures++;
-    writeRow({ ts_ct: ct.iso, ts_utc: tsUtc, status: "ERROR", parties: "", min: "", max: "", partySize: "", source: "none", note: e.message.slice(0, 120) });
+    let ctx = "";
+    try { const ts = await cdpHttp("/json"); ctx = (ts.find(t => t.type === "page") || {}).url || ""; } catch {}
+    writeRow({ ts_ct: ct.iso, ts_utc: tsUtc, status: "ERROR", parties: "", min: "", max: "", partySize: "", source: "none", note: `${e.message} | ${ctx}`.slice(0, 150) });
     log(`sample failed (${consecutiveFailures}): ${e.message.split("\n")[0]}`);
     if (consecutiveFailures >= 3) { killChrome(); try { ws?.close(); } catch {}; ws = null; consecutiveFailures = 0; }
   }
