@@ -214,6 +214,9 @@ async function sampleOnce() {
     return { status: "OPEN", parties: pm ? parseInt(pm[1], 10) : "", min: parseInt(m[1], 10), max: m[2] ? parseInt(m[2], 10) : parseInt(m[1], 10), partySize: "", source: "dom", note: "" };
   }
   if (/just a moment/i.test(text)) throw new Error("cloudflare challenge page");
+  // Page rendered but no waitlist module: Toast hides it entirely outside service hours.
+  if (/original pancake house/i.test(text))
+    return { status: "NO_MODULE", parties: "", min: "", max: "", partySize: "", source: "dom", note: "waitlist module absent" };
   throw new Error("no waitlist data in response or DOM");
 }
 
