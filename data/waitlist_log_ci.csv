@@ -1,0 +1,2 @@
+ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,party_size,source,note
+2026-08-14T15:28:58,2026-08-14T20:28:58.819Z,ERROR,,,,,none,timeout: Runtime.evaluate
