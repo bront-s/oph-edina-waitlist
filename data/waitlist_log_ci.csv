@@ -1688,3 +1688,5 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-08-17T15:25:00,2026-08-17T20:25:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-08-17T15:26:00,2026-08-17T20:26:00.006Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-08-17T15:27:00,2026-08-17T20:27:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-08-17T15:28:00,2026-08-17T20:28:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-08-17T15:29:00,2026-08-17T20:29:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
