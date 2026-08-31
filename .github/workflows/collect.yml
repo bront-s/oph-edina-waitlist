@@ -48,6 +48,7 @@ jobs:
           GIT_COMMIT: '1'
           CHROME_PATH: /usr/bin/google-chrome
           CSV_PATH: data/waitlist_log_ci.csv
+          END_CT: '2026-09-14T15:35'
           WINDOW_START: ${{ steps.win.outputs.start }}
           WINDOW_END: ${{ steps.win.outputs.end }}
           SMOKE_MINUTES: ${{ github.event.inputs.smoke_minutes }}
