@@ -1,0 +1,21 @@
+name: waitlist-healthcheck
+# Fails loudly (red X + GitHub notification email) if a day produced no data,
+# so a silent stop like Aug 22-30 can never happen again.
+on:
+  schedule:
+    - cron: '45 21 * * *'   # ~4:45 PM CT daily, after the afternoon job has committed
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if today's data is missing or thin
+        run: |
+          TODAY=$(TZ=America/Chicago date +%Y-%m-%d)
+          N=$(grep -c "^${TODAY}" data/waitlist_log_ci.csv || true)
+          echo "samples for ${TODAY}: ${N}"
+          if [ "${N}" -lt 300 ]; then
+            echo "::error::Only ${N} samples for ${TODAY} - the waitlist collector is not running properly!"
+            exit 1
+          fi
