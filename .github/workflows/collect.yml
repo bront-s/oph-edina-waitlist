@@ -2,10 +2,10 @@ name: waitlist-collect
 
 on:
   schedule:
-    - cron: '40 10 * * *'   # ~05:40 CT — samples 06:00–10:30 CT
-    - cron: '30 11 * * *'   # backup fire ~06:30 CT (GitHub cron can lag hours; concurrency dedupes)
-    - cron: '15 15 * * *'   # ~10:15 CT — samples 10:30–15:30 CT
-    - cron: '10 16 * * *'   # backup fire ~11:10 CT
+    # GitHub cron is best-effort (fires dropped/late). Fire every 20 min across the
+    # sampling day; the concurrency group ensures only one collector runs and the
+    # rest exit in seconds. UTC: 10:40-20:40 = ~05:40-15:40 CT.
+    - cron: '*/20 10-20 * * *'
   workflow_dispatch:
     inputs:
       smoke_minutes:
