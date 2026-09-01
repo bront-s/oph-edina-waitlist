@@ -4059,3 +4059,4 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-08-31T15:27:00,2026-08-31T20:27:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-08-31T15:28:00,2026-08-31T20:28:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-08-31T15:29:00,2026-08-31T20:29:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-01T09:33:48,2026-09-01T14:33:48.631Z,OPEN,7,15,25,2,api,
