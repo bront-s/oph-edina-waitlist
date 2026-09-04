@@ -13,9 +13,14 @@ jobs:
       - name: Fail if today's data is missing or thin
         run: |
           TODAY=$(TZ=America/Chicago date +%Y-%m-%d)
-          N=$(grep -c "^${TODAY}" data/waitlist_log_ci.csv || true)
-          echo "samples for ${TODAY}: ${N}"
-          if [ "${N}" -lt 300 ]; then
-            echo "::error::Only ${N} samples for ${TODAY} - the waitlist collector is not running properly!"
+          BEST=0
+          for f in data/waitlist_log_ci.csv data/waitlist_log_ci_b.csv; do
+            [ -f "$f" ] || continue
+            N=$(grep -c "^${TODAY}" "$f" || true)
+            echo "samples for ${TODAY} in ${f}: ${N}"
+            [ "${N}" -gt "${BEST}" ] && BEST=$N
+          done
+          if [ "${BEST}" -lt 300 ]; then
+            echo "::error::Best lane has only ${BEST} samples for ${TODAY} - no collector lane ran properly!"
             exit 1
           fi

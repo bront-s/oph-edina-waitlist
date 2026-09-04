@@ -1,0 +1,62 @@
+name: waitlist-collect-b
+
+on:
+  workflow_dispatch:
+    inputs:
+      smoke_minutes:
+        description: 'Sample for N minutes starting now (ignores the open-hours window)'
+        required: false
+
+concurrency:
+  group: waitlist-collect-b
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # branch tip at job START, not the stale SHA pinned at run creation
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Configure git identity
+        run: |
+          git config user.name "waitlist-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Determine sampling window
+        id: win
+        run: |
+          H=$(date -u +%H%M)
+          if [ "$H" -lt 1500 ]; then
+            echo "start=06:00" >> "$GITHUB_OUTPUT"; echo "end=10:30" >> "$GITHUB_OUTPUT"
+          else
+            echo "start=10:30" >> "$GITHUB_OUTPUT"; echo "end=15:30" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run collector
+        env:
+          CI_MODE: '1'
+          GIT_COMMIT: '1'
+          CHROME_PATH: /usr/bin/google-chrome
+          CSV_PATH: data/waitlist_log_ci_b.csv
+          END_CT: '2027-12-31T15:35'
+          WINDOW_START: ${{ steps.win.outputs.start }}
+          WINDOW_END: ${{ steps.win.outputs.end }}
+          SMOKE_MINUTES: ${{ github.event.inputs.smoke_minutes }}
+        run: xvfb-run --auto-servernum node collector.mjs
+
+      - name: Final data commit
+        if: always()
+        run: |
+          git add data/ || true
+          git commit -m "waitlist data $(date -u +%FT%TZ)" || true
+          git pull --rebase || true
+          git push || true

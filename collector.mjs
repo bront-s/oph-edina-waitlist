@@ -28,7 +28,7 @@ const CI = !!process.env.CI_MODE;
 const GIT_COMMIT = !!process.env.GIT_COMMIT;
 const WINDOW_START = process.env.WINDOW_START || "06:00";
 const WINDOW_END = process.env.WINDOW_END || "15:30";
-const END_CT = process.env.END_CT || "2026-08-21T15:35";
+const END_CT = process.env.END_CT || "2027-12-31T15:35";
 const SMOKE = process.env.SMOKE_MINUTES ? parseInt(process.env.SMOKE_MINUTES, 10) : 0;
 
 function log(msg) {
