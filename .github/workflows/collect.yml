@@ -2,12 +2,14 @@ name: waitlist-collect
 
 on:
   schedule:
-    # ALL triggers fire at window start, independently - no primary/backup hierarchy.
-    # Concurrency keeps exactly one runner; extra fires queue or expire harmlessly.
-    - cron: '30 10 * * *'   # 05:30 CT - morning start (redundant with Claude starter)
-    - cron: '13 11 * * *'   # 06:13 CT - second shot in case GitHub drops the first
-    - cron: '3 15 * * *'    # 10:03 CT - afternoon start (queues behind morning job until 10:30)
-    - cron: '45 15 * * *'   # 10:45 CT - late catch-up
+    # Three segments, splices at 9:30 and 14:00 CT (away from the 10:00-13:00 decision window).
+    # ALL triggers fire at each boundary independently; concurrency dedupes.
+    - cron: '30 10 * * *'   # 05:30 CT - segment 1 (06:00-09:30)
+    - cron: '13 11 * * *'   # 06:13 CT - segment 1 second shot
+    - cron: '3 14 * * *'    # 09:03 CT - segment 2 (09:30-14:00), queues behind segment 1
+    - cron: '45 14 * * *'   # 09:45 CT - segment 2 catch-up
+    - cron: '33 18 * * *'   # 13:33 CT - segment 3 (14:00-15:30), queues behind segment 2
+    - cron: '10 19 * * *'   # 14:10 CT - segment 3 catch-up
   workflow_dispatch:
     inputs:
       smoke_minutes:
@@ -42,10 +44,12 @@ jobs:
         id: win
         run: |
           H=$(date -u +%H%M)
-          if [ "$H" -lt 1500 ]; then
-            echo "start=06:00" >> "$GITHUB_OUTPUT"; echo "end=10:30" >> "$GITHUB_OUTPUT"
+          if [ "$H" -lt 1430 ]; then
+            echo "start=06:00" >> "$GITHUB_OUTPUT"; echo "end=09:30" >> "$GITHUB_OUTPUT"
+          elif [ "$H" -lt 1900 ]; then
+            echo "start=09:30" >> "$GITHUB_OUTPUT"; echo "end=14:00" >> "$GITHUB_OUTPUT"
           else
-            echo "start=10:30" >> "$GITHUB_OUTPUT"; echo "end=15:30" >> "$GITHUB_OUTPUT"
+            echo "start=14:00" >> "$GITHUB_OUTPUT"; echo "end=15:30" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run collector

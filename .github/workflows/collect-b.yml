@@ -2,11 +2,13 @@ name: waitlist-collect-b
 
 on:
   schedule:
-    # Lane B: same all-fire-at-start principle, minutes offset from lane A.
-    - cron: '33 10 * * *'   # 05:33 CT
-    - cron: '16 11 * * *'   # 06:16 CT
-    - cron: '6 15 * * *'    # 10:06 CT
-    - cron: '55 15 * * *'   # 10:55 CT
+    # Lane B: same three-segment schedule, minutes offset from lane A.
+    - cron: '33 10 * * *'
+    - cron: '16 11 * * *'
+    - cron: '6 14 * * *'
+    - cron: '48 14 * * *'
+    - cron: '36 18 * * *'
+    - cron: '13 19 * * *'
   workflow_dispatch:
     inputs:
       smoke_minutes:
@@ -41,10 +43,12 @@ jobs:
         id: win
         run: |
           H=$(date -u +%H%M)
-          if [ "$H" -lt 1500 ]; then
-            echo "start=06:00" >> "$GITHUB_OUTPUT"; echo "end=10:30" >> "$GITHUB_OUTPUT"
+          if [ "$H" -lt 1430 ]; then
+            echo "start=06:00" >> "$GITHUB_OUTPUT"; echo "end=09:30" >> "$GITHUB_OUTPUT"
+          elif [ "$H" -lt 1900 ]; then
+            echo "start=09:30" >> "$GITHUB_OUTPUT"; echo "end=14:00" >> "$GITHUB_OUTPUT"
           else
-            echo "start=10:30" >> "$GITHUB_OUTPUT"; echo "end=15:30" >> "$GITHUB_OUTPUT"
+            echo "start=14:00" >> "$GITHUB_OUTPUT"; echo "end=15:30" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Run collector
