@@ -1,11 +1,6 @@
 name: waitlist-collect
 
 on:
-  schedule:
-    # GitHub cron is best-effort (fires dropped/late). Fire every 20 min across the
-    # sampling day; the concurrency group ensures only one collector runs and the
-    # rest exit in seconds. UTC: 10:40-20:40 = ~05:40-15:40 CT.
-    - cron: '*/20 10-20 * * *'
   workflow_dispatch:
     inputs:
       smoke_minutes:
@@ -24,6 +19,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # branch tip at job START, not the stale SHA pinned at run creation
 
       - uses: actions/setup-node@v4
         with:

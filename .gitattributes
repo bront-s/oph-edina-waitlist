@@ -1,0 +1,2 @@
+# Collector runs only append rows; on push races, keep both sides instead of conflicting
+data/*.csv merge=union
