@@ -1,0 +1,2 @@
+ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,party_size,source,note
+2026-09-04T08:12:34,2026-09-04T13:12:34.859Z,EMPTY_CLOSED,0,5,15,2,api,
