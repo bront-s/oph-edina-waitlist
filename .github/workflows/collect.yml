@@ -1,6 +1,8 @@
 name: waitlist-collect
 
 on:
+  schedule:
+    - cron: '45 15 * * *'   # 10:45 CT backstop: only matters if the Claude starter was rate-limited; otherwise queues briefly and exits
   workflow_dispatch:
     inputs:
       smoke_minutes:
