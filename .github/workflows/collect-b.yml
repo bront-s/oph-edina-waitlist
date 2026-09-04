@@ -2,7 +2,11 @@ name: waitlist-collect-b
 
 on:
   schedule:
-    - cron: '55 15 * * *'   # 10:55 CT backstop for lane B
+    # Lane B: same all-fire-at-start principle, minutes offset from lane A.
+    - cron: '33 10 * * *'   # 05:33 CT
+    - cron: '16 11 * * *'   # 06:16 CT
+    - cron: '6 15 * * *'    # 10:06 CT
+    - cron: '55 15 * * *'   # 10:55 CT
   workflow_dispatch:
     inputs:
       smoke_minutes:

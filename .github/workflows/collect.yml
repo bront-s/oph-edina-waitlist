@@ -2,7 +2,12 @@ name: waitlist-collect
 
 on:
   schedule:
-    - cron: '45 15 * * *'   # 10:45 CT backstop: only matters if the Claude starter was rate-limited; otherwise queues briefly and exits
+    # ALL triggers fire at window start, independently - no primary/backup hierarchy.
+    # Concurrency keeps exactly one runner; extra fires queue or expire harmlessly.
+    - cron: '30 10 * * *'   # 05:30 CT - morning start (redundant with Claude starter)
+    - cron: '13 11 * * *'   # 06:13 CT - second shot in case GitHub drops the first
+    - cron: '3 15 * * *'    # 10:03 CT - afternoon start (queues behind morning job until 10:30)
+    - cron: '45 15 * * *'   # 10:45 CT - late catch-up
   workflow_dispatch:
     inputs:
       smoke_minutes:
