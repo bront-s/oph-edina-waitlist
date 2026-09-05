@@ -5496,3 +5496,14 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-09-05T06:20:00,2026-09-05T11:20:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-09-05T06:21:00,2026-09-05T11:21:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-09-05T06:22:00,2026-09-05T11:22:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-05T06:23:00,2026-09-05T11:23:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-05T06:24:00,2026-09-05T11:24:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-05T06:25:00,2026-09-05T11:25:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-05T06:26:00,2026-09-05T11:26:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-05T06:27:00,2026-09-05T11:27:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-05T06:28:00,2026-09-05T11:28:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-05T06:29:00,2026-09-05T11:29:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-05T06:30:00,2026-09-05T11:30:00.001Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-05T06:31:00,2026-09-05T11:31:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-05T06:32:00,2026-09-05T11:32:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-05T06:33:00,2026-09-05T11:33:00.005Z,EMPTY_CLOSED,0,5,15,2,api,
