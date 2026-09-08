@@ -2321,3 +2321,4 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-09-08T09:27:00,2026-09-08T14:27:00.029Z,EMPTY_CLOSED,0,5,15,2,api,
 2026-09-08T09:28:00,2026-09-08T14:28:00.024Z,EMPTY_CLOSED,0,5,15,2,api,
 2026-09-08T09:29:00,2026-09-08T14:29:00.028Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-08T09:30:21,2026-09-08T14:30:21.267Z,ERROR,,,,,none,chrome did not come up on CDP port | 
