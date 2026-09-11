@@ -8929,3 +8929,14 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-09-11T06:40:00,2026-09-11T11:40:00.027Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
 2026-09-11T06:41:00,2026-09-11T11:41:00.005Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
 2026-09-11T06:42:00,2026-09-11T11:42:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-11T06:43:00,2026-09-11T11:43:00.005Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-11T06:44:00,2026-09-11T11:44:00.028Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-09-11T06:45:00,2026-09-11T11:45:00.005Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-11T06:46:00,2026-09-11T11:46:00.009Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-09-11T06:47:00,2026-09-11T11:47:00.005Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-09-11T06:48:00,2026-09-11T11:48:00.004Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-11T06:49:00,2026-09-11T11:49:00.028Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-11T06:50:00,2026-09-11T11:50:00.027Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-11T06:51:00,2026-09-11T11:51:00.028Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-11T06:52:00,2026-09-11T11:52:00.016Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-11T06:53:00,2026-09-11T11:53:00.029Z,EMPTY_CLOSED,0,5,15,2,api,
