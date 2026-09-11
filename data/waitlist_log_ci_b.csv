@@ -3849,3 +3849,13 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-09-11T06:29:00,2026-09-11T11:29:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-09-11T06:30:00,2026-09-11T11:30:00.001Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-09-11T06:31:00,2026-09-11T11:31:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-11T06:32:00,2026-09-11T11:32:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-11T06:33:00,2026-09-11T11:33:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-11T06:34:00,2026-09-11T11:34:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-11T06:35:00,2026-09-11T11:35:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-11T06:36:00,2026-09-11T11:36:00.006Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-11T06:37:00,2026-09-11T11:37:00.003Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-11T06:38:00,2026-09-11T11:38:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-11T06:39:00,2026-09-11T11:39:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-11T06:40:00,2026-09-11T11:40:00.005Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-09-11T06:41:00,2026-09-11T11:41:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
