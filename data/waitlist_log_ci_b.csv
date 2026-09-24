@@ -11722,3 +11722,7 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-09-24T15:23:00,2026-09-24T20:23:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-09-24T15:24:00,2026-09-24T20:24:00.002Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-09-24T15:25:00,2026-09-24T20:25:00.006Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-24T15:25:59,2026-09-24T20:25:59.999Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-24T15:27:00,2026-09-24T20:27:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-24T15:28:00,2026-09-24T20:28:00.003Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-24T15:29:00,2026-09-24T20:29:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
