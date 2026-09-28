@@ -19090,3 +19090,13 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-09-28T14:52:00,2026-09-28T19:52:00.027Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
 2026-09-28T14:53:00,2026-09-28T19:53:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-09-28T14:54:00,2026-09-28T19:54:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-28T14:55:00,2026-09-28T19:55:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-28T14:56:00,2026-09-28T19:56:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-28T14:57:00,2026-09-28T19:57:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-28T14:58:00,2026-09-28T19:58:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-28T14:59:00,2026-09-28T19:59:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-28T15:00:00,2026-09-28T20:00:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-28T15:01:00,2026-09-28T20:01:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-28T15:02:00,2026-09-28T20:02:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-28T15:03:00,2026-09-28T20:03:00.006Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-09-28T15:04:00,2026-09-28T20:04:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
