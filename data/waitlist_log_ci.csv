@@ -18556,3 +18556,4 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-09-27T15:27:00,2026-09-27T20:27:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-09-27T15:28:00,2026-09-27T20:28:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-09-27T15:29:00,2026-09-27T20:29:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-09-28T06:00:10,2026-09-28T11:00:10.591Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
