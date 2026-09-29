@@ -14356,3 +14356,13 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-09-29T12:48:00,2026-09-29T17:48:00.029Z,EMPTY_CLOSED,0,5,15,2,api,
 2026-09-29T12:49:00,2026-09-29T17:49:00.028Z,EMPTY_CLOSED,0,5,15,2,api,
 2026-09-29T12:50:00,2026-09-29T17:50:00.027Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-29T12:51:00,2026-09-29T17:51:00.027Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-29T12:52:00,2026-09-29T17:52:00.028Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-29T12:53:00,2026-09-29T17:53:00.029Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-09-29T12:54:00,2026-09-29T17:54:00.006Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-09-29T12:55:00,2026-09-29T17:55:00.004Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-29T12:56:00,2026-09-29T17:56:00.029Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-09-29T12:57:00,2026-09-29T17:57:00.004Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-29T12:58:00,2026-09-29T17:58:00.009Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-09-29T12:59:00,2026-09-29T17:59:00.001Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-09-29T13:00:00,2026-09-29T18:00:00.028Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
