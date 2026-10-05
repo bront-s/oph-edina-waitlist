@@ -2,13 +2,20 @@ name: waitlist-collect-b
 
 on:
   schedule:
+    # Crons are UTC: each time is listed for CDT and again +1h for CST, so no DST edits are ever needed.
     # Lane B: same three-segment schedule, minutes offset from lane A.
     - cron: '33 10 * * *'
+    - cron: '33 11 * * *'   # CST twin (+1h UTC); early/extra fires queue or wait, concurrency dedupes
     - cron: '16 11 * * *'
+    - cron: '16 12 * * *'   # CST twin (+1h UTC); early/extra fires queue or wait, concurrency dedupes
     - cron: '6 14 * * *'
+    - cron: '6 15 * * *'   # CST twin (+1h UTC); early/extra fires queue or wait, concurrency dedupes
     - cron: '48 14 * * *'
+    - cron: '48 15 * * *'   # CST twin (+1h UTC); early/extra fires queue or wait, concurrency dedupes
     - cron: '36 18 * * *'
+    - cron: '36 19 * * *'   # CST twin (+1h UTC); early/extra fires queue or wait, concurrency dedupes
     - cron: '13 19 * * *'
+    - cron: '13 20 * * *'   # CST twin (+1h UTC); early/extra fires queue or wait, concurrency dedupes
   workflow_dispatch:
     inputs:
       smoke_minutes:
@@ -42,10 +49,11 @@ jobs:
       - name: Determine sampling window
         id: win
         run: |
-          H=$(date -u +%H%M)
-          if [ "$H" -lt 1430 ]; then
+          # Segment chosen by Central local time so it is DST-proof (collector.mjs is already CT-aware).
+          H=$(TZ=America/Chicago date +%H%M)
+          if [ "$H" -lt 0930 ]; then
             echo "start=06:00" >> "$GITHUB_OUTPUT"; echo "end=09:30" >> "$GITHUB_OUTPUT"
-          elif [ "$H" -lt 1900 ]; then
+          elif [ "$H" -lt 1400 ]; then
             echo "start=09:30" >> "$GITHUB_OUTPUT"; echo "end=14:00" >> "$GITHUB_OUTPUT"
           else
             echo "start=14:00" >> "$GITHUB_OUTPUT"; echo "end=15:30" >> "$GITHUB_OUTPUT"
