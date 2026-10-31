@@ -37637,3 +37637,4 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-10-31T13:57:00,2026-10-31T18:57:00.028Z,EMPTY_CLOSED,0,5,15,2,api,
 2026-10-31T13:58:00,2026-10-31T18:58:00.013Z,EMPTY_CLOSED,0,5,15,2,api,
 2026-10-31T13:59:00,2026-10-31T18:59:00.007Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-10-31T14:00:12,2026-10-31T19:00:12.206Z,EMPTY_CLOSED,0,5,15,2,api,
