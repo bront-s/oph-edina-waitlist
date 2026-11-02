@@ -33670,3 +33670,4 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-11-02T13:57:00,2026-11-02T19:57:00.026Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
 2026-11-02T13:58:00,2026-11-02T19:58:00.004Z,EMPTY_CLOSED,0,5,15,2,api,
 2026-11-02T13:59:00,2026-11-02T19:59:00.023Z,EMPTY_CLOSED,0,5,15,2,api,
+2026-11-02T14:28:54,2026-11-02T20:28:54.278Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
