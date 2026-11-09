@@ -37140,3 +37140,13 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-11-08T15:28:00,2026-11-08T21:28:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-11-08T15:29:00,2026-11-08T21:29:00.001Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-11-09T06:00:22,2026-11-09T12:00:22.781Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-11-09T06:02:00,2026-11-09T12:02:00.040Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-11-09T06:03:00,2026-11-09T12:03:00.006Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
+2026-11-09T06:04:00,2026-11-09T12:04:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-11-09T06:05:00,2026-11-09T12:05:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-11-09T06:06:00,2026-11-09T12:06:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-11-09T06:07:00,2026-11-09T12:07:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-11-09T06:08:00,2026-11-09T12:08:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-11-09T06:09:00,2026-11-09T12:09:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-11-09T06:10:00,2026-11-09T12:10:00.003Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-11-09T06:11:00,2026-11-09T12:11:00.005Z,NO_MODULE,,,,,dom,waitlist module absent
