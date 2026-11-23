@@ -44999,3 +44999,4 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-11-22T15:27:00,2026-11-22T21:27:00.005Z,ERROR,,,,,none,no waitlist data in response or DOM | https://toast.app/r/oph-edina
 2026-11-22T15:28:00,2026-11-22T21:28:00.001Z,NO_MODULE,,,,,dom,waitlist module absent
 2026-11-22T15:29:00,2026-11-22T21:29:00.004Z,NO_MODULE,,,,,dom,waitlist module absent
+2026-11-23T06:00:08,2026-11-23T12:00:08.693Z,NO_MODULE,,,,,dom,waitlist module absent
