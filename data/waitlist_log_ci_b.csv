@@ -45479,3 +45479,4 @@ ts_ct,ts_utc,waitlist_status,parties_ahead,wait_min_minutes,wait_max_minutes,par
 2026-11-23T13:57:00,2026-11-23T19:57:00.024Z,OPEN,1,5,15,2,api,
 2026-11-23T13:58:00,2026-11-23T19:58:00.024Z,OPEN,1,5,15,2,api,
 2026-11-23T13:59:00,2026-11-23T19:59:00.028Z,OPEN,1,5,15,2,api,
+2026-11-24T06:00:28,2026-11-24T12:00:28.118Z,NO_MODULE,,,,,dom,waitlist module absent
